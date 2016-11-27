@@ -10,21 +10,19 @@ def main():
     r = math.sqrt((3000/math.pi) / h)
     l = math.sqrt(h**2 + r**2)
     rsq = r**2
-    v = (1/3)*math.pi*rsq*h
+    v = 0.333*math.pi*rsq*h
     sa = math.pi*r*l
     if 999.99 < v < 1000.01 and 8.9 < r < 9.1:
         lsa.append(sa)
         lh.append(h)
         lr.append(r)
 t = time()
-for i in range(11,(13*res)):
+for i in range(11*res, (13*res)):
     h = i/res
-    if i % 10000000 == 0:
-        print(str((i/((13*res)-1))*100) + "% | " + str(time()-t) + " seconds")
     main()
+
 tfinal = time()-t
-lsas = lsa
-lsas.sort()
+lsas = lsa.sort()
 bsa = lsas[0]
 bh = lh[lsa.index(bsa)]
 br = lr[lsa.index(bsa)]
