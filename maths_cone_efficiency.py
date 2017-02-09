@@ -11,7 +11,7 @@ def main():
     r = math.sqrt((3000/math.pi) / h) # Defining radius
     l = math.sqrt(h**2 + r**2) # Defining length
     rsq = r**2 # Defining radius^2
-    v = 0.33333333333333333333*math.pi*rsq*h # Defining volume, didn't like 1/3 so gave 0.333...
+    v = (math.pi*rsq*h)/3 # Defining volume
     sa = math.pi*r*l # Surface area calculation
     if 999.99 < v < 1000.01 and 8.9 < r < 9.1: # Filter for only some specific values close to desires value, bounds
         lsa.append(sa)
