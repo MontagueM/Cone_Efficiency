@@ -6,7 +6,7 @@ hyp_null_prob = ""
 drv = ""
 trials = ""
 sig_level = ""
-# Defining functions
+# Defining functions''-['''''''''
 
 
 def ncr(n, r):
